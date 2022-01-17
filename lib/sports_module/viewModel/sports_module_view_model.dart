@@ -79,13 +79,10 @@ class SportsModuleViewModel extends ChangeNotifier {
             countryName: countryName, league: league);
     if (_data != null && _data.countrys != null && _data.countrys!.isNotEmpty) {
       this.leaguesModel = _data;
-      print("leaguesModel");
-      print(leaguesModel);
       apiStateTracker = ApiStateTracker.HasData;
     } else {
       apiStateTracker = ApiStateTracker.NoData;
     }
-
     notifyListeners();
   }
 }
